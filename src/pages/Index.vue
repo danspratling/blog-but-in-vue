@@ -3,20 +3,15 @@
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <g-image alt="Example image" src="~/favicon.png" width="135" />
 
+    <Hero />
+
     <Container>
-      <Row>
+      <Row class="blog-list">
         <Col class="col-md-12">
           <p>test</p>
         </Col>
       </Row>
     </Container>
-
-    <p>asdLorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores</p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
   </Layout>
 </template>
 
@@ -29,7 +24,9 @@ export default {
 </script>
 
 <style>
-.home-links a {
-  margin-right: 1rem;
+.blog-list {
+  position: relative;
+  margin: -100px auto auto;
+  justify-content: center;
 }
 </style>

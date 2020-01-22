@@ -5,11 +5,17 @@ import DefaultLayout from './layouts/Default.vue';
 import GridContainer from '~/grid/Container.vue';
 import Row from '~/grid/Row.vue';
 import Col from '~/grid/Col.vue';
+import Hero from '~/components/Hero.vue';
 
 export default function(Vue, { router, head, isClient }) {
-  // Set default layout as a global component
+  //Layout
   Vue.component('Layout', DefaultLayout);
+
+  //Grid
   Vue.component('Container', GridContainer);
   Vue.component('Row', Row);
   Vue.component('Col', Col);
+
+  //General
+  Vue.component('Hero', Hero);
 }
