@@ -8,14 +8,27 @@ import Col from '~/grid/Col.vue';
 import Hero from '~/components/Hero.vue';
 
 export default function(Vue, { router, head, isClient }) {
-  //Layout
+  //Fonts
+
+  head.link.push(
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css?family=Montserrat'
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css?family=Merriweather'
+    }
+  );
+
+  //Layout Components
   Vue.component('Layout', DefaultLayout);
 
-  //Grid
+  //Grid Components
   Vue.component('Container', GridContainer);
   Vue.component('Row', Row);
   Vue.component('Col', Col);
 
-  //General
+  //General Components
   Vue.component('Hero', Hero);
 }
