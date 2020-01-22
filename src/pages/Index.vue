@@ -7,20 +7,43 @@
 
     <Container>
       <Row class="blog-list">
-        <Col class="col-md-12">
-          <p>test</p>
+        <Col
+          class="col-md-12"
+          v-for="post in $page.allPost.edges"
+          :key="post.node.id"
+        >
+          <p>{{ post.node.title }}</p>
         </Col>
       </Row>
     </Container>
   </Layout>
 </template>
 
+<page-query>
+query{
+  allPost(sort: {by: "date", order:DESC }) {
+    edges {
+      node{
+        id
+        excerpt
+      	path
+        date
+        title
+        description
+      }
+    }
+  }
+}
+</page-query>
+
 <script>
 export default {
   metaInfo: {
-    title: "Hello, world!"
+    title: 'Hello, world!'
   }
 };
+
+// console.log($page);
 </script>
 
 <style>

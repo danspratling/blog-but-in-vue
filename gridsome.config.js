@@ -6,7 +6,15 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: [],
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/**/*.md',
+        typeName: 'Post'
+      }
+    }
+  ],
   chainWebpack: config => {
     const svgRule = config.module.rule('svg');
     svgRule.uses.clear();
