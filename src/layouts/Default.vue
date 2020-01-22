@@ -1,13 +1,15 @@
 <template>
   <div class="layout">
     <header class="header">
-      <g-link to="/">Home</g-link>
+      <!-- <g-link to="/">Home</g-link> -->
       <!-- <dark-button></dark-button> -->
     </header>
     <slot />
     <footer>
-      © {{ new Date().getFullYear() }}, Built with
-      <a href="https://gridsome.org">Gridsome</a>
+      <center>
+        © {{ new Date().getFullYear() }}, Built with
+        <a href="https://gridsome.org">Gridsome</a>
+      </center>
     </footer>
   </div>
 </template>
@@ -39,7 +41,7 @@ query {
   --gray-7: #2d3748;
   --gray-8: #1a202c;
 
-  --font-body: 'system-ui, sans-serif';
+  --font-body: 'system-ui';
   --font-heading: 'Montserrat';
   --font-monospace: 'Menlo, monospace';
 
@@ -47,8 +49,8 @@ query {
   --fontweight-heading: 700;
   --fontweight-bold: 700;
 
-  --body-lineheight: 1.5;
-  --heading-lineheight: 1.125;
+  --lineheight-body: 1.5;
+  --lineheight-heading: 1.125;
 
   --fontsize-0: 12px;
   --fontsize-1: 14px;
@@ -94,9 +96,9 @@ query {
 body {
   font-family: var(--font-body);
   line-height: var(--lineheight-body);
-  letter-spacing: '.5px';
+  letter-spacing: 0.5px;
   margin: 0;
-  min-height: '100vh';
+  min-height: 100vh;
   color: var(--text);
   background-color: var(--background);
 }

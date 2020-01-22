@@ -6,6 +6,7 @@ import GridContainer from '~/grid/Container.vue';
 import Row from '~/grid/Row.vue';
 import Col from '~/grid/Col.vue';
 import Hero from '~/components/Hero.vue';
+import Post from '~/components/Post.vue';
 
 export default function(Vue, { router, head, isClient }) {
   //Fonts
@@ -13,7 +14,7 @@ export default function(Vue, { router, head, isClient }) {
   head.link.push(
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css?family=Montserrat'
+      href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700'
     },
     {
       rel: 'stylesheet',
@@ -31,4 +32,5 @@ export default function(Vue, { router, head, isClient }) {
 
   //General Components
   Vue.component('Hero', Hero);
+  Vue.component('Post', Post);
 }

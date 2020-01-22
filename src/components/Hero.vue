@@ -40,6 +40,7 @@ export default {
     var(--primary) 0%,
     var(--secondary) 100%
   );
+  box-sizing: border-box;
   overflow: hidden;
 }
 
