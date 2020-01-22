@@ -11,15 +11,15 @@
   max-width: 100vw;
 }
 
-@media (min-width: var(--breakpoints-2)) {
+@media (min-width: 48em) {
   .container {
-    max-width: var(--breakpoints-3);
+    max-width: var(--breakpoint-3);
   }
 }
 
-@media (min-width: var(--breakpoints-3)) {
+@media (min-width: 72em) {
   .container {
-    max-width: var(--breakpoints-4);
+    max-width: var(--breakpoint-4);
   }
 }
 </style>
